@@ -26,6 +26,10 @@ public class CustomerRestController {
 	
 	@GetMapping("/customers/{customerId}")
 	public Customer getCustomer(@PathVariable int customerId) {
-		return customerService.getCustomer(customerId);
+		Customer theCustomer = customerService.getCustomer(customerId);
+		if(theCustomer == null) {
+			throw new CustomerNotFoundException("Cusotmer not found by this id: " + customerId);
+		}
+		return theCustomer;
 	}
 }

@@ -11,4 +11,8 @@ This is a demo app for Spring REST API practice.
 
 ### Exception Handling
 
+- Development Processor: 1. Create an error response class. 2. Create an exception class. 3. Update REST service to throw exception. 4. Add an exception handler method using @ExceptionHandler.
+
+### Add New Entity by REST
+
 - 
